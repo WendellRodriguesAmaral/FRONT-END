@@ -1,0 +1,132 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.full-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.topo{
+    width: 100%;
+    height: 10vh;
+    /* background-color: aquamarine; */
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.topo .topo-conteudo{
+    width: 16%;
+    height: 100%;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.topo-conteudo img {
+    width: 12%;
+    height: 37%;
+}
+  
+
+
+.principal {
+    width: 100%;    
+    /* background-color: brown; */
+}
+
+.centro{
+    width: 50%;
+    height: 90%;
+    /* background-color: rgb(170, 170, 170); */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centro img {
+    width: 50%;
+}
+.centro input{
+    width: 85%;
+    height: 10%;
+    border: solid 1px rgb(196, 196, 196);
+    border-radius: 50px;
+}
+.centro .botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black; */
+    width: 80%;
+    height: 20%;
+}
+.centro #voz{
+    position: absolute;
+    width: 1.8%;
+    top: 42%;
+    right: 30%;
+}
+
+.centro #lupa {
+    position: absolute;
+    width: 1.1%;
+    top: 43%;
+    left: 30%;
+
+}
+
+.centro p{
+    font-size: 10pt;
+    margin-top: 4%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.botoes button {
+    margin: 0  2%;
+    width: 25%;
+    height: 40%;
+    color: rgb(90, 90, 90);
+    border-radius: 5px;
+}
+
+.rodape {
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.left{
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    width: 23%;
+    justify-content: space-between;
+   color: rgb(117, 111, 111);
+   font-size: 12pt;
+}
+
+.right{
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-between;
+   color: rgb(117, 111, 111);
+   font-size: 12pt;
+}
