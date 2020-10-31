@@ -2,4 +2,4 @@
 
 <p>Apenas uma brincadeira quando estava com um tempo livre e resolvi replicar a pagina do google</p>
 
-![Alt text] (print.png)
+![Alt text](print.png)
