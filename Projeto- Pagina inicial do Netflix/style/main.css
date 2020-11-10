@@ -78,11 +78,14 @@ header nav a:hover{
     margin-right: 15px;
     font-size: 13px;
     cursor: pointer;
+    transition: .3s ease all;
 }
 
 .botao:hover{
     background-color: white;
     color: black;
-    transition: .3s ease all;
+}
 
+.botao i{
+    margin-right:5px;
 }
