@@ -12,6 +12,7 @@ let food={//coordenadas de onde a comida vai aparecer
     y:Math.floor(Math.random()*15 +1)*box
 }
 
+
 let pont=document.getElementsByTagName("span")[0]
 // console.log(pont)
 let num=0
@@ -55,7 +56,7 @@ function iniciarJogo(){
         if(snake[0].x== snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo) // parar a variavel "jogo"
             document.location.reload(false)//false recarrega o cache tbm, true recarrega sem o cache
-            alert("Gamer Over :(")
+            alert(`Fim de Jogo !\nSua pontuação foi de ${num} pontos.`)
         }
     }
 
@@ -93,6 +94,6 @@ function iniciarJogo(){
     if(snake[0].y > 15*box && direction =="down") snake[0].y=0;
     if(snake[0].y < 0 && direction=="up") snake[0].y=16*box;
 }
-let jogo= setInterval(iniciarJogo,100) //"atualizar" a cada 100ms, ou seja a cada 100ms executa iniciaJogo
+let jogo= setInterval(iniciarJogo,120) //"atualizar" a cada 100ms, ou seja a cada 100ms executa iniciaJogo
 
 
