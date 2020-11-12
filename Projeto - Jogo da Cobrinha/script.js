@@ -6,6 +6,7 @@ snake[0]={
     x:8*box,
     y:8*box
 }
+
 let direction = "right"
 let food={//coordenadas de onde a comida vai aparecer
     x:Math.floor(Math.random()*15+1)*box, //Math.floor retira ponto flutuante do math.random
