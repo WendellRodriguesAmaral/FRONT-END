@@ -15,7 +15,7 @@ let food={//coordenadas de onde a comida vai aparecer
 
 
 function criarBG(){
-    context.fillStyle="lightgreen"
+    context.fillStyle="lightgreen"// estilo do contexto criado
     context.fillRect(0,0,16*box,16*box) //(x,y,altura,largura)  \\ x=horizontal    y=vertical  
     //                   16*box=512 ou seja 100% do box definido no html
 }
@@ -51,6 +51,14 @@ function iniciarJogo(){
     if(snake[0].y <0 && direction=="up") snake[0].y=16*box;
 
 
+    for(i=1;i<snake.length;i++){
+        if(snake[0].x== snake[i].x && snake[0].y == snake[i].y){
+            clearInterval(jogo) // parar a variavel "jogo"
+            document.location.reload(false)//false recarrega o cache tbm, true recarrega sem o cache
+            alert("Gamer Over :(")
+        }
+    }
+
     
     criarBG();
     criarCorbrinha();
@@ -58,7 +66,7 @@ function iniciarJogo(){
     let snakeX=snake[0].x
     let snakeY=snake[0].y
 
-    if(direction=="right") snakeX+=box;
+    if(direction=="right") snakeX+=box; //dependendo do lado, adiciona mais um quadrado, "pedaço do corpo"
     if(direction=="left") snakeX -=box;
     if(direction=="up") snakeY-= box;
     if(direction=="down") snakeY+=box;
@@ -79,6 +87,6 @@ function iniciarJogo(){
     snake.unshift(newHead);//o metodo unshift add o elemento a posição 0 de um array
 
 }
-let jogo= setInterval(iniciarJogo,100) //"atualizar" a cada 100ms
+let jogo= setInterval(iniciarJogo,100) //"atualizar" a cada 100ms, ou seja a cada 100ms executa iniciaJogo
 
 
