@@ -7,7 +7,10 @@ snake[0]={
     y:8*box
 }
 let direction = "right"
-
+let food={//coordenadas de onde a comida vai aparecer
+    x:Math.floor(Math.random()*15+1)*box, //Math.floor retira ponto flutuante do math.random
+    y:Math.floor(Math.random()*15 +1)*box
+}
 
 
 
@@ -22,6 +25,11 @@ function criarCorbrinha(){
         context.fillStyle="green"
         context.fillRect(snake[i].x,snake[i].y,box,box)
     }
+}
+
+function drawFood(){
+    context.fillStyle="Red"
+    context.fillRect(food.x ,food.y,box,box)
 }
 
 
@@ -43,9 +51,10 @@ function iniciarJogo(){
     if(snake[0].y <0 && direction=="up") snake[0].y=16*box;
 
 
-
+    
     criarBG();
     criarCorbrinha();
+    drawFood();
     let snakeX=snake[0].x
     let snakeY=snake[0].y
 
@@ -64,7 +73,6 @@ function iniciarJogo(){
     snake.unshift(newHead);//o metodo unshift add o elemento a posição 0 de um array
 
 }
-
 let jogo= setInterval(iniciarJogo,100) //"atualizar" a cada 100ms
 
 
