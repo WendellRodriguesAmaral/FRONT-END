@@ -9,10 +9,20 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: aquamarine;
 }
 
-h1{
+h2{
     color: rgb(45, 121, 32);
     display: flex;
     align-items: center;
+    letter-spacing: 4px;
+}
+span{
+    color: black;
+}
+
+canvas{
+    border: solid 8px rgb(28, 110, 39);
+    border-radius: 10px;
 }

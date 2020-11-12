@@ -12,6 +12,9 @@ let food={//coordenadas de onde a comida vai aparecer
     y:Math.floor(Math.random()*15 +1)*box
 }
 
+let pont=document.getElementsByTagName("span")[0]
+// console.log(pont)
+let num=0
 
 
 function criarBG(){
@@ -45,10 +48,7 @@ function update(event){
 }
 
 function iniciarJogo(){
-    if(snake[0].x > 15*box && direction=="right") snake[0].x =0; // se a posição horizontal dela passar de 480px, sua posição volta a ser 0
-    if(snake[0].x < 0 && direction =="left") snake[0].x=16*box;
-    if(snake[0].y > 15*box && direction =="down") snake[0].y=0;
-    if(snake[0].y <0 && direction=="up") snake[0].y=16*box;
+    
 
 
     for(i=1;i<snake.length;i++){
@@ -76,6 +76,8 @@ function iniciarJogo(){
     } else {
         food.x=Math.floor(Math.random()*15+1)*box //Math.floor retira ponto flutuante do math.random
         food.y=Math.floor(Math.random()*15 +1)*box
+        num+=1
+        pont.innerHTML=num
     }
     // snake.pop();
 
@@ -86,6 +88,10 @@ function iniciarJogo(){
 
     snake.unshift(newHead);//o metodo unshift add o elemento a posição 0 de um array
 
+    if(snake[0].x > 15*box && direction=="right") snake[0].x =0; // se a posição horizontal dela passar de 480px, sua posição volta a ser 0
+    if(snake[0].x < 0 && direction =="left") snake[0].x=16*box;
+    if(snake[0].y > 15*box && direction =="down") snake[0].y=0;
+    if(snake[0].y < 0 && direction=="up") snake[0].y=16*box;
 }
 let jogo= setInterval(iniciarJogo,100) //"atualizar" a cada 100ms, ou seja a cada 100ms executa iniciaJogo
 
