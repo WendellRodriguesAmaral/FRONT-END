@@ -7,6 +7,8 @@ snake[0]={
     y:8*box
 }
 
+
+
 let direction = "right"
 let food={//coordenadas de onde a comida vai aparecer
     x:Math.floor(Math.random()*15+1)*box, //Math.floor retira ponto flutuante do math.random
@@ -87,7 +89,6 @@ function iniciarJogo(){
         x:snakeX,
         y:snakeY
     }
-
     snake.unshift(newHead);//o metodo unshift add o elemento a posição 0 de um array
 
     if(snake[0].x > 15*box && direction=="right") snake[0].x =0; // se a posição horizontal dela passar de 480px, sua posição volta a ser 0
@@ -96,5 +97,6 @@ function iniciarJogo(){
     if(snake[0].y < 0 && direction=="up") snake[0].y=16*box;
 }
 let jogo= setInterval(iniciarJogo,120) //"atualizar" a cada 100ms, ou seja a cada 100ms executa iniciaJogo
+
 
 
