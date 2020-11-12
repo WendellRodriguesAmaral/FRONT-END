@@ -63,9 +63,15 @@ function iniciarJogo(){
     if(direction=="up") snakeY-= box;
     if(direction=="down") snakeY+=box;
 
-    snake.pop();
+    if(snakeX != food.x || snakeY != food.y){
+        snake.pop();
+    } else {
+        food.x=Math.floor(Math.random()*15+1)*box //Math.floor retira ponto flutuante do math.random
+        food.y=Math.floor(Math.random()*15 +1)*box
+    }
+    // snake.pop();
 
-    let newHead={
+    let newHead={//posição da cabeça da cobra
         x:snakeX,
         y:snakeY
     }
