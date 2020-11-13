@@ -1,4 +1,4 @@
-<h1>Recriando a pagina inicial do instagram</h1>
+# Recriando a pagina inicial do instagram
 
 <p>HTML - CSS</p>
 
