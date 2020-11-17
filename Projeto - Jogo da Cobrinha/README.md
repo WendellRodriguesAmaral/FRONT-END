@@ -7,3 +7,4 @@ HTML-CSS-JS
 
 ![Alt Text](Captura_de_Tela.png)
 
+Cada vez que a cobra encosta na comida, é somado um ponto.
