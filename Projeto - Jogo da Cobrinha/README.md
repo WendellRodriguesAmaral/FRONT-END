@@ -7,4 +7,6 @@ HTML-CSS-JS
 
 ![Alt Text](Captura_de_Tela.png)
 
-Cada vez que a cobra encosta na comida, é somado um ponto.
+Cada vez que a cobra encosta na comida, é somado um ponto;
+
+Ao encostar na borda da tela, ela sai do outro lado da tela, em qualquer direção que estiver.
