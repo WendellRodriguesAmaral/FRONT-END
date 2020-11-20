@@ -1,4 +1,4 @@
-<h1>RECRIANDO A PAGINA INICIAL DO NETFLIX</h1>
+<h1>RECRIANDO A PAGINA INICIAL DO NETFLIX 🎬</h1>
 
 <p>Curso da Digital Innovation One</p>
 
