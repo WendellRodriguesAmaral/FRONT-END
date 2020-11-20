@@ -1,4 +1,4 @@
-<h1>Projeto de um site de fotografias.</h1> Tela inicial-(Responsivo)
+<h1>Projeto de um site de fotografias. :camera: </h1> Tela inicial-(Responsivo)
 
 obs:Somente Home
 
