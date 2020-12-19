@@ -42,7 +42,7 @@ function ApareceCand(){  // PARA APARECER OS CANDIDATOS NO VISOR
     if(vis1.value == 2 && vis2.value == 5){
         img.setAttribute("src" , "img/tiririca.png")
         infoCand[0].innerText="Tiririca"
-        infoCand[1].innerText="Partido Comerciante"
+        infoCand[1].innerText="Partido Comediante"
         fotoCand.appendChild(img)
     }
     if(vis1.value == 7 && vis2.value == 7){
@@ -60,7 +60,7 @@ function ApareceCand(){  // PARA APARECER OS CANDIDATOS NO VISOR
     if(vis1.value == 4 && vis2.value == 1){
         img.setAttribute("src" , "img/batman.jpg")
         infoCand[0].innerText="Batman"
-        infoCand[1].innerText="Partido Verde"
+        infoCand[1].innerText="Partido dos Morcegos"
         fotoCand.appendChild(img)
     }         
 }
