@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="urna.css">
+    <link rel="shortcut icon" href="img/vote.png" type="image/x-icon">
+    <title>Urna de votação</title>
+</head>
+    <body>
+        <main class="container-full">
+            <div class="cand">
+                <p>CANDIDATOS</p>
+                <p>11 - Seu Madruga (PSDB) | 25 - Tiririca (PCdoB) | 77 - Julius (Democratas) | 35 - Sergio (PT) | 41 - Batman (Partido Verde) </p>
+            </div>
+
+
+            <div class="urna">
+                <section class="lado-esquerdo">
+                    <div id="FIM"><h1> FIM...</h1><p>Recarregue a página para votar novamente.</p></div>
+
+                    <div class="tela">
+                        
+                        <div class="topo-tela">
+                            <h5>DIGITE O NUMERO DO SEU CANDIDATO:</h5>
+                        </div>
+                        
+                        <div class="centro-tela">
+                            <div class="info-cadidato">
+                                <div class="info-candidato-votação">
+                                    <h4>PRESIDENTE</h4>
+                                    <div id="vot">
+                                        Numero:
+                                        <input id="inpt1" type="text" size="1" maxlength=1 readonly>
+                                        <input id="inpt2" type="text" size="1" maxlength=1 readonly>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="info-candidato-particular">
+                                    <h4>Nome: <span></span></h4>
+                                    <h4>Partido: <span></span></h4>
+                                </div>
+                            </div>
+                            <div class="foto-candidato">
+                                <div class="foto">
+
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        
+                        <div class="fim-tela">
+                            
+                            <h5>APERTE:</h5>
+                            <P id="conf">CONFIRMA para CONFIRMAR seu voto.</P>
+                            <P id="corrige">CORRIGE para REINICIAR seu voto.</P>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+                <section class="lado-direito">
+                    <div class="conteudo-lado-direito">
+                        <div class="justiça">
+                            <div class="img-justiça">
+                                <img src="img/justiça-eleitoral.png" alt="">
+                            </div>
+                            <div class="justica-eleitoral">
+                                <h1>
+                                    JUSTIÇA ELEITORAL
+                                </h1>
+                            </div>
+                        </div>
+
+
+                        <div class="area-botoes">
+                            <div class="botoes">
+                                <button class="btn" value="1" onclick="clicar(value)">1</button>
+                                <button class="btn" value="2" onclick="clicar(value)">2</button>
+                                <button class="btn" value="3" onclick="clicar(value)">3</button>
+                                <button class="btn" value="4" onclick="clicar(value)">4</button>
+                                <button class="btn" value="5" onclick="clicar(value)">5</button>
+                                <button class="btn" value="6" onclick="clicar(value)">6</button>
+                                <button class="btn" value="7" onclick="clicar(value)">7</button>
+                                <button class="btn" value="8" onclick="clicar(value)">8</button>
+                                <button class="btn" value="9" onclick="clicar(value)">9</button>
+                                <button class="btn" value="0" onclick="clicar(value)">0</button>
+                            </div>
+                        </div>
+
+
+                        <div class="botoes-finais">
+                            <button onclick="branco()">BRANCO</button>
+                            <button onclick="corrige()">CORRIGE</button>
+                            <button onclick="confirma()">CONFIRMA</button>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script src="urna.js"></script>
+    </body>
+</html>
