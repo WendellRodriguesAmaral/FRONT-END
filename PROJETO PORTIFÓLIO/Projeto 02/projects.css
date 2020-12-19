@@ -5,13 +5,12 @@
 }
 @keyframes show{
     from{
-        opacity: 10%;
+        /* opacity: 10%; */
         transform: scale(0.1);
     }
-    to{
+    to{        
         opacity: 100%;
         transform: scale(1);
-
     }
 }
 
