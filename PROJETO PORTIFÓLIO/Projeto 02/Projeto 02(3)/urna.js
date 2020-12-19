@@ -36,19 +36,19 @@ function ApareceCand(){  // PARA APARECER OS CANDIDATOS NO VISOR
     if(vis1.value == 1 && vis2.value == 1){
         img.setAttribute("src" , "img/Seu_Madruga.png")
         infoCand[0].innerText="Seu Madruga"
-        infoCand[1].innerText="PSDB"
+        infoCand[1].innerText="Partido dos Devedores"
         fotoCand.appendChild(img) // ja que esta função atualiza a cada 1 seg, melhor colocar isso em cada if
     }
     if(vis1.value == 2 && vis2.value == 5){
         img.setAttribute("src" , "img/tiririca.png")
         infoCand[0].innerText="Tiririca"
-        infoCand[1].innerText="PCdoB"
+        infoCand[1].innerText="Partido Comerciante"
         fotoCand.appendChild(img)
     }
     if(vis1.value == 7 && vis2.value == 7){
         img.setAttribute("src" , "img/julius.jpg")
         infoCand[0].innerText="Julius"
-        infoCand[1].innerText="Democratas"
+        infoCand[1].innerText="Coligação Muquiranas"
         fotoCand.appendChild(img)
     }
     if(vis1.value == 3 && vis2.value == 5){
