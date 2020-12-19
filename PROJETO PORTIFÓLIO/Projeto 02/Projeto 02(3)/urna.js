@@ -53,8 +53,8 @@ function ApareceCand(){  // PARA APARECER OS CANDIDATOS NO VISOR
     }
     if(vis1.value == 3 && vis2.value == 5){
         img.setAttribute("src" , "img/sergio.jpg")
-        infoCand[0].innerText="Sergio Malandro"
-        infoCand[1].innerText="PT"
+        infoCand[0].innerText="Serginho Malandro"
+        infoCand[1].innerText="Partidos dos Malandros"
         fotoCand.appendChild(img)
     }
     if(vis1.value == 4 && vis2.value == 1){
