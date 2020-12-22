@@ -1,0 +1,147 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+@keyframes show{
+    from{
+        /* opacity: 10%; */
+        transform: scale(0.1);
+    }
+    to{        
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #29276e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.projetos{
+    width: 90%;
+    height: auto;
+    /* border: solid 1px ; */
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.projeto{
+    opacity: 0%;
+    width: 31%;
+    height: 50vh;
+    border: solid 1px #63439e;
+    margin: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 231);
+    transition: .4s;
+    
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+}
+.projeto:nth-child(2){
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: .8s;
+}
+.projeto:nth-child(3){
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 1.1s;
+}
+
+
+.projeto:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px 1px white;
+    background-color: white;
+    border: solid 1px transparent;
+}
+
+.projeto h1{
+    text-align: center;
+    color: #423f3f;
+}
+
+.projeto p{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10%;
+    padding: 0 5%;
+    color: #423f3f;
+    font-size:90%;
+    overflow: auto; /*quando o conteudo ficar pequeno dms, nao sair da div*/
+}   
+
+.projeto a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    height: 6vh;
+    margin-bottom: 5%;
+}
+
+.projeto input{
+    width: 50%;
+    cursor: pointer;
+    background-color: #0e0d57;
+    /* border: #adb8be solid 2px; */
+    border-radius: 5px;
+    color:#ffffff;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+}
+
+.projeto:hover input{
+    opacity: 100%;
+    transition: .3s;
+}
+.projeto input:hover{
+    background-color:#0e0d57d3 ;
+    border: transparent;
+    padding: 2%;
+}
+
+
+/*######################*/
+
+@media screen and (max-width:800px){
+    .projetos{
+        flex-direction: column;
+    }
+    .projeto{
+        width: 95%;
+        height: 70vh;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .projetos{
+        flex-direction: column;
+    }
+    .projeto{
+        width: 95%;
+        height: 50vh;
+    }
+}

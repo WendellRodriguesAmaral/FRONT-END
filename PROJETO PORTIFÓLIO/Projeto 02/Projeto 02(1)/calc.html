@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Stalinist+One&display=swap" rel="stylesheet">   
+    <link rel="shortcut icon" href="./img/calc.png" type="image/x-icon">
+     <title>Calculadora básica</title>
+</head>
+    <body>
+        <div class="full">
+            
+            <main class="calc">
+                <section class="visor">
+                    <input type="text" value="0" readonly id="visor">
+                </section>
+                <hr>
+
+                <section class="teclas">
+                   <input type="button" value="7" class="btn" onclick="calcular(value)"disabled>
+                   <input type="button" value="8" class="btn" disabled onclick="calcular(value)">
+                   <input type="button" value="9" class="btn" disabled onclick="calcular(value)">
+                   <input type="button" value="+" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="C" class="btn c"disabled onclick=" reseta1()">
+                   <input type="button" value="4" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="5" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="6" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="-" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="CE" class="btn ce" onclick="reset()"disabled>
+                   <input type="button" value="1" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="2" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="3" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="*" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="=" class="btn igual"disabled onclick="resultado()">
+                   <input type="button" value="0" class="btn zero"disabled onclick="calcular(value)">
+                   <input type="button" value="." class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="/" class="btn"disabled onclick="calcular(value)">
+                   <input type="button" value="OFF" class="btn off" onclick="onoff(this)">
+                </section>
+
+                
+            </main>
+            <h2>Projeto Calculadora Simples</h2>
+            <p>Por Wendell Rodrigues</p>
+        </div>
+        <script src="calc.js"></script>
+    </body>
+</html>

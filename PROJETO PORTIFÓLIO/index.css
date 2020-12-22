@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.full-container{  
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    grid-template-rows: auto auto auto;
+}
+.first-image #projeto{
+    display: none;
+}
+
+.first-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(./imagens/Teclado\ Background.jpg) no-repeat;
+    background-size:cover;
+    background-position: 18%;
+}
+.first-image img{
+    display: none;
+}
+
+.first-image__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    color: white;  
+    font-family: 'PT Sans', sans-serif;
+    width: auto;
+    max-width: 100vw;
+    height: auto;
+}
+@keyframes up{
+    from{
+        opacity: 0;
+        transform:translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0%);
+    }
+}
+
+.animation{
+    animation-name: up;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    cursor: pointer;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+}
+
+.first-image__text h1{
+    display: inline-block;
+    width: auto;
+    max-width: min-content;
+    font-size: 4rem;
+}
+.first-image__text p{
+    font-size: 1.5rem;
+
+}
+/*#################################################
+    AQUI COMEÇA O CONTEUDO CENTRAL
+###################################################*/
+
+.about-me{
+    width: 100vw;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(212, 211, 211, 0.781);
+}
+.about-me__image{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+}
+.about-me__image img{    
+    width: 100%;
+    border-radius: 100% 70%;
+}
+
+.about-me__text{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;    
+    font-size: 2rem;    
+    padding: 10%; 
+    text-align: justify;
+}
+.about-me__text h1{
+    margin-bottom: 8%;
+}
+.about-me__text .about-me__languages img{
+    display: none;
+}
+
+/*#################################################
+    AQUI ACABA O CONTEUDO CENTRAL
+###################################################*/
+
+.my-projects{
+    width: 100vw;
+    /* height: 170vh; */
+    padding: 1%;
+    /* background-color: coral; */
+}
+
+.my-projects__view{
+    /* background-color: cornflowerblue; */
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*   .classe::after{
+        content=""
+        heigth=100%;
+        width=0%;
+        backgtound: ...;
+        transition= .4s;
+    }
+
+    .classe:hover::after{
+        witdh=100%
+    }
+*/
+
+
+
+.my-projects__view h1{
+    font-family: 'PT Sans', sans-serif;    
+    font-size: 3.5rem;
+    margin-bottom: 8%;
+
+}
+
+.project{
+    display: grid;
+    grid-template-rows:  auto 1fr auto;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    width: 90%;
+    height: 50vh;
+    margin-bottom: 10%;
+    box-shadow: 5px 5px 4px 1px rgba(204, 204, 204, 0.712);
+    background-color: rgba(200, 200, 250, 0.534);
+}
+
+.projet-title,
+.project-description,
+.project-button {
+    display: flex;
+    justify-content: center;
+}
+.project-description{
+    padding: 2%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.project-button button{
+        width: 80vw;
+        height: 95%;
+        font-size: 1.5rem;
+        font-family:'PT Sans', sans-serif; 
+        cursor: pointer;
+        padding: 1%;
+        border-radius: 5px;
+        background-color: rgba(130, 140, 195, 0.808);
+        box-shadow: 5px 5px 5px 1px rgba(204, 204, 204, 0.712);
+        color: rgb(19, 11, 61);
+        font-weight: bold;
+        margin-bottom: 1%;
+}
+
+.project h1{
+    font-size: 2.5rem;
+    color: rgb(19, 11, 61);
+}
+
+.project a{
+    text-decoration: none;
+}
+
+.my-projects__view-contact h2,a,span{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    font-family: 'PT Sans', sans-serif;    
+    margin: 2%;
+}
+.my-projects__view-contact span.email{
+    font-size: 1.5rem;
+}
+
+/*############################################################################################
+
+        DESKTOP VERSION
+
+#############################################################################################*/
+
+@media only screen and (min-width:768px){ /* de 768px pra cima*/
+    html{
+        scroll-behavior: smooth;
+    }
+   .first-image{
+       flex-direction: column;
+   }
+   .first-image a{
+       text-decoration: none;
+   }
+
+   @keyframes up3 {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 20%;
+    }        
+    
+}
+
+   .first-image #projeto{
+       display: inline;
+       position: absolute;
+       /* background-color: turquoise; */
+       font-size: 1.3rem;
+       top: 9%;
+       left: 2%;
+       color: white;
+       font-family:'PT Sans', sans-serif; 
+       font-weight: 600;
+       /* animation-name: up3;
+       animation-duration: 1s;
+       animation-iteration-count:infinite ;
+       animation-direction: alternate; */
+       transition: transform 0.3s;  
+    
+   }
+
+   .first-image #projeto:hover{
+    transform: scale(1.1);
+    opacity: 90%;
+   }
+
+    .first-image .github{
+        display: block;
+        position: absolute;
+        right: 3%;
+        top:2%;
+        opacity:100%; 
+        transform: scale(0.8);
+        transition: transform 0.5s;   
+    }
+    .first-image img:hover{
+        opacity: 90%;
+        transform: scale(1);
+    }
+    
+    
+    .first-image__text h1{
+        max-width: max-content;     
+    }
+
+    .first-image__arrow{
+        position: absolute;
+       
+        height: 15%;
+        /* display: block; */
+        width: 100%;
+        bottom: 0;
+        display:flex ;
+        justify-content: center;
+        align-items: center;
+    }
+    @keyframes arrow {
+        from{
+            transform: translateY(0);
+            opacity: 50%;
+        }
+        to{
+            transform: translateY(30%);
+            opacity: 100%;
+        }        
+        
+    }
+
+    .first-image__arrow img{
+        display: block;
+        width: 80%;
+        height: 100%;  
+        animation-name: arrow;
+        animation-duration:0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+        
+
+          
+    }
+    .first-image__arrow a{       
+        width: 9%;
+        height: 70%;
+        
+        
+    }
+
+    /**AQUI COMEÇA O CONTEUDO CENTRAL*/
+
+    @keyframes up2 {
+        from{
+            opacity: 80%;
+        }
+        to{
+            opacity: 10%;
+        }        
+        
+    }
+
+    .animation2{
+        animation-name: up2;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        
+    }
+
+    .about-me{  
+        height: 100vh;
+        padding: 1%;
+        display: flex;        
+        flex-direction: row;
+        background-color: rgba(212, 211, 211, 0.781);
+        /* padding-bottom: 10%; */
+    }
+    .about-me__image{
+        display: flex;
+        justify-content: center;
+        width: 25%;
+        margin-left: 5%;
+    }
+    .about-me__text{
+        
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        font-family: 'PT Sans', sans-serif;    
+        font-size: 1.1rem;    
+        padding: 5%; 
+        text-align: justify;
+    }
+    .about-me__text h1{
+        font-size: 3rem;  
+        margin-bottom: 5%;
+    }
+    .about-me__text .about-me__languages img{
+        opacity: 60%;
+        display:inline-block;
+        position: relative;
+        width: 35%;
+        right: -65%;
+        transform: translateY(40%);
+    }
+/*#########   PROJETOS   #########*/
+  
+    @keyframes project {
+        from{
+            margin-left: 3%;
+        } to{
+            margin-right: 3%;
+        }
+        
+    }
+
+    .project:hover {
+        animation-name: project;
+        animation-duration: .05s;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+        /* animation-timing-function:step-start; */
+        background-color:rgba(18, 29, 102, 0.747) ;
+        color: white;
+        transition: .4s;
+        font-weight: normal;       
+    }
+
+    .project:hover h1{
+        color: rgb(255, 255, 255);
+        font-size: 5rem;
+        opacity: 50%;  
+        transition: .4s;     
+    }
+
+
+    .project{
+        display: grid;
+        grid-template-rows:  auto 1fr auto;
+        border-radius: 15px;
+        width: 80%;
+        height: 60vh;
+        margin-bottom: 5%;
+        box-shadow: 5px 5px 4px 1px rgba(204, 204, 204, 0.712);
+        background-color: rgba(200, 200, 250, 0.534);
+        text-align: start;
+    }
+    
+    .project h1{
+        margin: 1.5%;
+        font-size: 2rem;
+        color: rgb(19, 11, 61);
+    }
+
+
+    .projet-title{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .project-description{
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2%;
+    }
+
+    .project-button{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .project-button button{
+        /* display: none; */
+        width: 20vw;
+        height: 100%;
+        font-size: 1.5rem;
+        font-family:'PT Sans', sans-serif; 
+        cursor: pointer;
+        padding: 5%;
+        border-radius: 5px;
+        background-color: rgba(130, 140, 195, 0.808);
+        box-shadow: 5px 5px 5px 1px rgba(204, 204, 204, 0.712);
+        color: rgb(19, 11, 61);
+        font-weight: bold;
+        margin-bottom: 1%;
+    }
+
+
+    .project button:hover{
+        background-color:rgb(19, 11, 61);
+        color:rgba(255, 255, 255, 0.849); 
+        transition: .2s;
+        font-weight: 400;
+    }
+
+    .project a{
+        text-decoration: none;
+    }
+    
+    .project h3{
+        font-family:'PT Sans', sans-serif; 
+        }
+
+    .my-projects__view-contact {
+        display: none;
+    }
+
+}
