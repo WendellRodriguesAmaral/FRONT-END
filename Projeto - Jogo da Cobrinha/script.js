@@ -94,10 +94,16 @@ function iniciarJogo(){
     if(snake[0].y < 0 && direction=="up") snake[0].y=16*box;
 
 
+    let dif=200
+    if(num>=20) dif=150
+    if(num>=40) dif=110
+    if(num>=60) dif=70
+    if(num>=80) dif=50
+    setTimeout(iniciarJogo,dif)// a cada vez ele chama a propria função com um dif diferente
 }
 
 
-let jogo= setInterval(iniciarJogo,150) //"atualizar" a cada 150ms, ou seja a cada 100ms executa iniciaJogo
+ setTimeout(iniciarJogo,150) //inicia a função dps de 150 ms , inicia apenas um vez
 
 
 
