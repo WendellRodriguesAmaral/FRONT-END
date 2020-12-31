@@ -2,6 +2,7 @@ let canvas =document.getElementById("snake")//recuperando o elemento
 let context=canvas.getContext("2d")// dizendo q ele é um elemento com contexto 2d
 let box =32 //32 pixels
 let snake=[]
+
 snake[0]={
     x:8*box,
     y:8*box
@@ -19,7 +20,6 @@ let food={//coordenadas de onde a comida vai aparecer
 let pont=document.getElementsByTagName("span")[0]
 // console.log(pont)
 let num=0
-
 
 function criarBG(){
     context.fillStyle="lightgreen"// estilo do contexto criado
@@ -52,9 +52,6 @@ function update(event){
 }
 
 function iniciarJogo(){
-    
-
-
     for(i=1;i<snake.length;i++){
         if(snake[0].x== snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo) // parar a variavel "jogo"
@@ -95,8 +92,12 @@ function iniciarJogo(){
     if(snake[0].x < 0 && direction =="left") snake[0].x=16*box;
     if(snake[0].y > 15*box && direction =="down") snake[0].y=0;
     if(snake[0].y < 0 && direction=="up") snake[0].y=16*box;
+
+
 }
-let jogo= setInterval(iniciarJogo,120) //"atualizar" a cada 100ms, ou seja a cada 100ms executa iniciaJogo
+
+
+let jogo= setInterval(iniciarJogo,150) //"atualizar" a cada 150ms, ou seja a cada 100ms executa iniciaJogo
 
 
 
