@@ -7,7 +7,9 @@ snake[0]={
     x:8*box,
     y:8*box
 }
-
+function carrega(){
+    alert("Bem vindo ao Jogo o jogo aumenta de dificuldade a cada 20 pontos")
+}
 
 
 let direction = "right"
@@ -53,8 +55,7 @@ function update(event){
 
 function iniciarJogo(){
     for(i=1;i<snake.length;i++){
-        if(snake[0].x== snake[i].x && snake[0].y == snake[i].y){
-            clearInterval(jogo) // parar a variavel "jogo"
+        if(snake[0].x== snake[i].x && snake[0].y == snake[i].y){                   
             document.location.reload(false)//false recarrega o cache tbm, true recarrega sem o cache
             alert(`Fim de Jogo !\nSua pontuação foi de ${num} pontos.`)
         }
@@ -93,7 +94,6 @@ function iniciarJogo(){
     if(snake[0].y > 15*box && direction =="down") snake[0].y=0;
     if(snake[0].y < 0 && direction=="up") snake[0].y=16*box;
 
-
     let dif=200
     if(num>=20) dif=150
     if(num>=40) dif=110
@@ -101,8 +101,6 @@ function iniciarJogo(){
     if(num>=80) dif=50
     setTimeout(iniciarJogo,dif)// a cada vez ele chama a propria função com um dif diferente
 }
-
-
  setTimeout(iniciarJogo,150) //inicia a função dps de 150 ms , inicia apenas um vez
 
 
